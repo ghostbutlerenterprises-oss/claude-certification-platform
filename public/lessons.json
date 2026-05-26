@@ -1,0 +1,1224 @@
+{
+  "lessons": [
+    {
+      "id": "lesson-1",
+      "tier": 1,
+      "week": 1,
+      "title": "Intro to Claude & Agentic AI",
+      "description": "Foundation concepts in AI agents and Claude's capabilities",
+      "objectives": [
+        "Understand what agentic AI is and how it differs from traditional AI",
+        "Learn Claude's core capabilities and use cases",
+        "Explore the Claude API and documentation",
+        "Understand token pricing and API best practices"
+      ],
+      "content": "Claude is an AI assistant built by Anthropic. Agentic AI refers to AI systems that can autonomously plan and execute multi-step tasks. In this lesson, you'll learn the fundamentals of building with Claude, including its capabilities in reasoning, coding, analysis, and automation. We'll cover the Claude API, different model sizes (Haiku, Sonnet, Opus), and best practices for prompt engineering.",
+      "resources": [
+        {
+          "title": "Claude Official Documentation",
+          "url": "https://docs.claude.com",
+          "description": "Complete API documentation and guides"
+        },
+        {
+          "title": "Prompt Engineering Guide",
+          "url": "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview",
+          "description": "Best practices for writing effective prompts"
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Agentic AI",
+          "definition": "AI systems capable of autonomous planning, decision-making, and task execution"
+        },
+        {
+          "term": "LLM",
+          "definition": "Large Language Model - neural network trained on vast amounts of text"
+        },
+        {
+          "term": "Token",
+          "definition": "Unit of text processing; roughly 4 characters = 1 token"
+        },
+        {
+          "term": "Prompt",
+          "definition": "Input instruction given to an AI model to generate a response"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What does agentic AI refer to?",
+            "options": [
+              "AI that can plan and execute multi-step tasks autonomously",
+              "AI that only responds to direct questions",
+              "AI that works exclusively in customer service",
+              "AI that cannot make any decisions"
+            ],
+            "correctAnswer": "AI that can plan and execute multi-step tasks autonomously"
+          },
+          {
+            "id": "q2",
+            "text": "Which Claude model is best for cost-effective simple tasks?",
+            "options": [
+              "Claude Opus",
+              "Claude Sonnet",
+              "Claude Haiku",
+              "All models cost the same"
+            ],
+            "correctAnswer": "Claude Haiku"
+          },
+          {
+            "id": "q3",
+            "text": "What is a token in the context of Claude API?",
+            "options": [
+              "A piece of text roughly equivalent to 4 characters",
+              "A security credential for API access",
+              "A type of programming language",
+              "A unit of computational power"
+            ],
+            "correctAnswer": "A piece of text roughly equivalent to 4 characters"
+          },
+          {
+            "id": "q4",
+            "text": "True or False: Claude can write, debug, and explain code",
+            "options": [
+              "True",
+              "False"
+            ],
+            "correctAnswer": "True"
+          },
+          {
+            "id": "q5",
+            "text": "What should you prioritize when writing prompts?",
+            "options": [
+              "Clarity and specificity of instructions",
+              "Using complex vocabulary",
+              "Making prompts as short as possible",
+              "None of the above"
+            ],
+            "correctAnswer": "Clarity and specificity of instructions"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-2",
+      "tier": 1,
+      "week": 1,
+      "title": "Prompting Fundamentals",
+      "description": "Master the art of writing effective prompts",
+      "objectives": [
+        "Learn the structure of effective prompts",
+        "Understand context, instruction, and examples",
+        "Practice iterating and improving prompts",
+        "Apply prompt engineering techniques"
+      ],
+      "content": "Effective prompts are the foundation of working with Claude. This lesson covers the anatomy of a good prompt: clear instructions, relevant context, examples (few-shot learning), and specifying output format. You'll learn techniques like role-playing, step-by-step reasoning, and constraint setting to get the best results from Claude.",
+      "resources": [
+        {
+          "title": "Claude Prompt Library",
+          "url": "https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview",
+          "description": "Collection of tested prompt examples"
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Few-shot Learning",
+          "definition": "Providing examples in the prompt to guide Claude's response"
+        },
+        {
+          "term": "Context Window",
+          "definition": "The amount of text Claude can consider at once (usually measured in tokens)"
+        },
+        {
+          "term": "System Prompt",
+          "definition": "Instructions that define Claude's behavior and role"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is few-shot learning?",
+            "options": [
+              "Providing examples in your prompt to guide the response",
+              "Using Claude only for short texts",
+              "Training Claude on your data",
+              "Asking Claude very simple questions"
+            ],
+            "correctAnswer": "Providing examples in your prompt to guide the response"
+          },
+          {
+            "id": "q2",
+            "text": "Which of the following is NOT a component of an effective prompt?",
+            "options": [
+              "Clear instruction",
+              "Relevant context",
+              "Output format specification",
+              "As much text as possible"
+            ],
+            "correctAnswer": "As much text as possible"
+          },
+          {
+            "id": "q3",
+            "text": "What should you do if Claude's first response isn't what you expected?",
+            "options": [
+              "Ask the same question again with slightly different wording",
+              "Add more context or examples to guide the response",
+              "Change your constraints or output format specification",
+              "All of the above"
+            ],
+            "correctAnswer": "All of the above"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-3",
+      "tier": 1,
+      "week": 1,
+      "title": "Your First Automation",
+      "description": "Build your first automated workflow with Claude",
+      "objectives": [
+        "Set up your development environment",
+        "Make your first API call to Claude",
+        "Handle responses and errors gracefully",
+        "Build a simple text processing automation"
+      ],
+      "content": "Time to get hands-on! You'll create your first automation using Claude's API. We'll cover authenticating with your API key, making requests with the Python SDK or REST API, parsing responses, and error handling. By the end, you'll have a working automation that processes text automatically.",
+      "resources": [
+        {
+          "title": "Claude Python SDK",
+          "url": "https://github.com/anthropics/anthropic-sdk-python",
+          "description": "Official Python client library"
+        },
+        {
+          "title": "API Key Management",
+          "url": "https://docs.claude.com/en/docs/build-with-claude/authentication",
+          "description": "How to create and manage API keys"
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "API Key",
+          "definition": "Secret credential used to authenticate with Claude API"
+        },
+        {
+          "term": "SDK",
+          "definition": "Software Development Kit - library for easily calling an API"
+        },
+        {
+          "term": "Request/Response",
+          "definition": "The message sent to Claude and the response received back"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "Where should you store your Claude API key?",
+            "options": [
+              "In environment variables, never in your code",
+              "Hardcoded in your Python script",
+              "In a git repository",
+              "In comments for easy access"
+            ],
+            "correctAnswer": "In environment variables, never in your code"
+          },
+          {
+            "id": "q2",
+            "text": "What does the SDK provide?",
+            "options": [
+              "An easy way to call Claude API without writing raw HTTP requests",
+              "Free API credits",
+              "Access to Claude without an API key",
+              "Unlimited tokens"
+            ],
+            "correctAnswer": "An easy way to call Claude API without writing raw HTTP requests"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-4",
+      "tier": 1,
+      "week": 2,
+      "title": "Building Agents",
+      "description": "Create autonomous agents that make decisions",
+      "objectives": [
+        "Understand agent architecture and decision loops",
+        "Implement tool use and function calling",
+        "Build agents that can call external APIs",
+        "Handle agent state and memory"
+      ],
+      "content": "Agents are AI systems that can use tools to accomplish goals. Claude can use tools (functions) to interact with external systems, fetch data, or perform actions. This lesson covers tool use, function calling, and building complete agent workflows where Claude decides what to do next based on outcomes.",
+      "resources": [
+        {
+          "title": "Tool Use Documentation",
+          "url": "https://docs.claude.com/en/docs/build-with-claude/tool-use",
+          "description": "How to enable Claude to use tools"
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Tool Use",
+          "definition": "Ability for Claude to call external functions or APIs"
+        },
+        {
+          "term": "Function Calling",
+          "definition": "Mechanism for Claude to request execution of specific functions"
+        },
+        {
+          "term": "Decision Loop",
+          "definition": "Cycle where agent decides action, executes it, evaluates outcome, repeats"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is tool use in Claude?",
+            "options": [
+              "Ability to call external functions and APIs",
+              "A way to ask Claude to think step-by-step",
+              "A prompt engineering technique",
+              "A method to reduce token usage"
+            ],
+            "correctAnswer": "Ability to call external functions and APIs"
+          },
+          {
+            "id": "q2",
+            "text": "In an agent loop, what happens after Claude decides on an action?",
+            "options": [
+              "The action is executed and Claude processes the result",
+              "The action is ignored",
+              "The conversation ends",
+              "Claude asks for user confirmation"
+            ],
+            "correctAnswer": "The action is executed and Claude processes the result"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-5",
+      "tier": 1,
+      "week": 2,
+      "title": "Multi-Step Workflows",
+      "description": "Orchestrate complex processes with multiple steps",
+      "objectives": [
+        "Design workflow architectures",
+        "Implement sequential and parallel processing",
+        "Handle dependencies between steps",
+        "Monitor and log workflow execution"
+      ],
+      "content": "Real-world automation often requires multiple steps working together. This lesson covers orchestrating complex workflows, managing state across steps, error handling, parallel execution, and monitoring. You'll learn patterns for building robust, production-ready automation systems.",
+      "resources": [
+        {
+          "title": "Workflow Design Patterns",
+          "url": "https://docs.claude.com",
+          "description": "Common patterns for building workflows"
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Workflow",
+          "definition": "Sequence of tasks that work together to accomplish a goal"
+        },
+        {
+          "term": "State Management",
+          "definition": "Tracking data and context as workflow progresses"
+        },
+        {
+          "term": "Error Handling",
+          "definition": "Strategies for dealing with failures in workflow steps"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is state management in a workflow?",
+            "options": [
+              "Tracking data and context as steps progress",
+              "Managing user interface design",
+              "Controlling who can access the workflow",
+              "Determining workflow speed"
+            ],
+            "correctAnswer": "Tracking data and context as steps progress"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-6",
+      "tier": 1,
+      "week": 2,
+      "title": "Hands-On Capstone Project",
+      "description": "Build a complete automation from start to finish",
+      "objectives": [
+        "Apply all Tier 1 concepts",
+        "Build a working automation system",
+        "Document your implementation",
+        "Test and validate your solution"
+      ],
+      "content": "Bring together everything you've learned in Tier 1. You'll design and build a complete automation that demonstrates prompting, API usage, tool use, and workflow orchestration. This capstone prepares you for specialization in either Sales or Customer Service automation.",
+      "resources": [
+        {
+          "title": "Claude API Reference",
+          "url": "https://docs.claude.com/en/docs/build-with-claude/overview",
+          "description": "Complete API documentation"
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Integration",
+          "definition": "Combining multiple systems or components into one solution"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What should your capstone project demonstrate?",
+            "options": [
+              "All Tier 1 concepts: prompting, API use, tool use, and workflows",
+              "Only basic prompt writing",
+              "Only API authentication",
+              "The use of one tool only"
+            ],
+            "correctAnswer": "All Tier 1 concepts: prompting, API use, tool use, and workflows"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-7",
+      "tier": 2,
+      "specialization": "sales",
+      "week": 3,
+      "title": "APIs & Salesforce Integration",
+      "description": "Connect Claude automation to Salesforce CRM",
+      "objectives": [
+        "Understand Salesforce API and authentication",
+        "Integrate Claude with Salesforce",
+        "Read and write CRM data programmatically",
+        "Build Salesforce-connected workflows"
+      ],
+      "content": "Salesforce is the leading CRM platform. Learn to authenticate with Salesforce APIs, read/write contacts and deals, and create Claude-powered automations that work directly with your CRM data. We'll cover OAuth authentication, REST API calls, and building bidirectional integrations.",
+      "resources": [
+        {
+          "title": "Salesforce REST API",
+          "url": "https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/",
+          "description": "Official Salesforce API documentation"
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "OAuth",
+          "definition": "Secure authentication protocol for API access"
+        },
+        {
+          "term": "REST API",
+          "definition": "Standard web API using HTTP methods"
+        },
+        {
+          "term": "SOQL",
+          "definition": "Salesforce Object Query Language for data retrieval"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What authentication method does Salesforce recommend for API integration?",
+            "options": [
+              "OAuth 2.0",
+              "Basic username/password",
+              "API key only",
+              "No authentication needed"
+            ],
+            "correctAnswer": "OAuth 2.0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-8",
+      "tier": 2,
+      "specialization": "sales",
+      "week": 3,
+      "title": "Lead Scoring Fundamentals",
+      "description": "Understand lead scoring models and implementations",
+      "objectives": [
+        "Learn lead scoring concepts",
+        "Understand qualification criteria",
+        "Implement basic scoring models",
+        "Evaluate lead quality"
+      ],
+      "content": "Lead scoring determines which prospects are most likely to convert. Learn to evaluate leads based on firmographic, behavioral, and engagement data. Build Claude-powered lead scoring that automatically analyzes prospects and prioritizes high-value leads.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Lead Scoring",
+          "definition": "Ranking leads by likelihood to convert to customers"
+        },
+        {
+          "term": "Firmographic Data",
+          "definition": "Company characteristics like size, industry, location"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is the goal of lead scoring?",
+            "options": [
+              "To prioritize leads most likely to convert",
+              "To reject all leads",
+              "To send the same message to all leads",
+              "None of the above"
+            ],
+            "correctAnswer": "To prioritize leads most likely to convert"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-9",
+      "tier": 2,
+      "specialization": "sales",
+      "week": 4,
+      "title": "Advanced Lead Scoring",
+      "description": "Build sophisticated AI-powered lead scoring",
+      "objectives": [
+        "Design multi-factor scoring models",
+        "Use Claude to analyze lead data",
+        "Implement dynamic scoring",
+        "A/B test scoring models"
+      ],
+      "content": "Move beyond basic lead scoring to build intelligent, AI-powered systems. Use Claude to analyze prospects in detail, considering engagement patterns, company fit, past interactions, and more. Build automated scoring that learns and adapts.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Multi-factor Scoring",
+          "definition": "Combining multiple data points for comprehensive evaluation"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What advantage does AI-powered lead scoring have?",
+            "options": [
+              "Can process more data and find complex patterns",
+              "Eliminates the need for humans",
+              "Guarantees 100% conversion",
+              "Works without any data"
+            ],
+            "correctAnswer": "Can process more data and find complex patterns"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-10",
+      "tier": 2,
+      "specialization": "sales",
+      "week": 4,
+      "title": "Email Personalization Fundamentals",
+      "description": "Create personalized email content at scale",
+      "objectives": [
+        "Understand personalization techniques",
+        "Generate context-aware email content",
+        "Maintain brand voice while personalizing",
+        "Test personalization effectiveness"
+      ],
+      "content": "Generic emails get ignored. Learn to generate personalized, relevant emails that speak to each prospect's situation. Use Claude to analyze prospect data and generate tailored messaging that increases response rates while maintaining efficiency at scale.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Personalization",
+          "definition": "Customizing content for specific individuals or segments"
+        },
+        {
+          "term": "A/B Testing",
+          "definition": "Comparing two versions to determine which performs better"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "Why is email personalization important in sales?",
+            "options": [
+              "It increases response rates and engagement",
+              "It's faster than generic emails",
+              "It costs less to send",
+              "All prospects prefer personalization"
+            ],
+            "correctAnswer": "It increases response rates and engagement"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-11",
+      "tier": 2,
+      "specialization": "sales",
+      "week": 5,
+      "title": "Email Sequencing & Campaigns",
+      "description": "Design multi-touch email campaigns",
+      "objectives": [
+        "Design effective email sequences",
+        "Plan follow-up timing and content",
+        "Build automated campaigns",
+        "Measure campaign performance"
+      ],
+      "content": "Single emails rarely close deals. Learn to design sophisticated email sequences that nurture relationships over time. Build automated campaigns using Claude to generate contextual follow-ups, handle objections, and adapt based on recipient behavior.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Email Sequence",
+          "definition": "Series of related emails sent over time to nurture a lead"
+        },
+        {
+          "term": "Automation",
+          "definition": "System that sends emails based on triggers or schedules"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is the advantage of email sequences over single emails?",
+            "options": [
+              "They build relationships over time and increase conversion rates",
+              "They are cheaper to send",
+              "They require no personalization",
+              "They work the same as single emails"
+            ],
+            "correctAnswer": "They build relationships over time and increase conversion rates"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-12",
+      "tier": 2,
+      "specialization": "sales",
+      "week": 5,
+      "title": "Production Systems & Monitoring",
+      "description": "Deploy and monitor sales automation at scale",
+      "objectives": [
+        "Design production-ready systems",
+        "Implement monitoring and alerts",
+        "Handle failures gracefully",
+        "Scale automation safely"
+      ],
+      "content": "Moving from testing to production requires careful planning. Learn to build systems that are reliable, observable, and can scale. Cover error handling, logging, monitoring, and best practices for production automation that won't fail your sales team.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Production",
+          "definition": "Live system used by real users/customers"
+        },
+        {
+          "term": "Monitoring",
+          "definition": "Continuously observing system health and performance"
+        },
+        {
+          "term": "Logging",
+          "definition": "Recording events and errors for debugging"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "Why is monitoring important in production automation?",
+            "options": [
+              "To quickly detect and fix issues before they impact users",
+              "To prevent all errors",
+              "To replace testing",
+              "To reduce costs"
+            ],
+            "correctAnswer": "To quickly detect and fix issues before they impact users"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-13",
+      "tier": 2,
+      "specialization": "sales",
+      "week": 6,
+      "title": "Sales Data Analysis with Claude",
+      "description": "Use Claude to extract insights from sales data",
+      "objectives": [
+        "Analyze sales performance data",
+        "Identify trends and patterns",
+        "Generate automated reports",
+        "Extract actionable insights"
+      ],
+      "content": "Claude can analyze complex sales data and generate meaningful insights. Learn to feed sales data to Claude for analysis: which campaigns work best, which customer segments convert highest, what objections appear most, and recommendations for improvement.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Data Analysis",
+          "definition": "Examining data to find patterns and insights"
+        },
+        {
+          "term": "Metrics",
+          "definition": "Quantifiable measurements of performance"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What can Claude help with regarding sales data?",
+            "options": [
+              "Analyzing patterns and generating insights",
+              "Deleting data",
+              "Creating sales calls",
+              "Replacing sales teams"
+            ],
+            "correctAnswer": "Analyzing patterns and generating insights"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-14",
+      "tier": 2,
+      "specialization": "sales",
+      "week": 6,
+      "title": "Objection Handling Automation",
+      "description": "Build systems to handle common sales objections",
+      "objectives": [
+        "Catalog common objections",
+        "Generate tailored responses",
+        "Escalate complex objections",
+        "Train on objection patterns"
+      ],
+      "content": "Every sales process encounters objections. Use Claude to analyze prospect objections and generate thoughtful, customized responses. Build systems that handle common concerns automatically while escalating complex situations to human sales reps.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Objection",
+          "definition": "Prospect's concern or reason for not moving forward"
+        },
+        {
+          "term": "Response Framework",
+          "definition": "Structured approach to addressing objections"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "How should Claude handle objections in sales?",
+            "options": [
+              "Generate contextual responses while escalating complex cases",
+              "Ignore all objections",
+              "Always offer discounts",
+              "End the conversation"
+            ],
+            "correctAnswer": "Generate contextual responses while escalating complex cases"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-15",
+      "tier": 2,
+      "specialization": "sales",
+      "week": 7,
+      "title": "Deal Intelligence & Forecasting",
+      "description": "Predict deal outcomes and identify risks",
+      "objectives": [
+        "Build deal scoring models",
+        "Predict deal probability",
+        "Identify risk factors",
+        "Forecast revenue"
+      ],
+      "content": "Predict which deals will close and when. Use Claude to analyze deal characteristics and forecast outcomes. Identify at-risk deals early and recommend interventions to improve close rates.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Deal Scoring",
+          "definition": "Predicting likelihood that a deal will close"
+        },
+        {
+          "term": "Risk Analysis",
+          "definition": "Identifying factors that might prevent deal closure"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is the benefit of deal forecasting?",
+            "options": [
+              "Better revenue prediction and early problem detection",
+              "Guaranteeing deals will close",
+              "Replacing sales forecasting",
+              "Reducing deal size"
+            ],
+            "correctAnswer": "Better revenue prediction and early problem detection"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-16",
+      "tier": 2,
+      "specialization": "sales",
+      "week": 7,
+      "title": "Sales Automation Capstone",
+      "description": "Build a complete sales automation system",
+      "objectives": [
+        "Integrate all sales automation concepts",
+        "Build an end-to-end sales workflow",
+        "Demonstrate lead scoring, personalization, and monitoring",
+        "Test and validate your system"
+      ],
+      "content": "Apply everything from Weeks 3-7. Build a complete sales automation that demonstrates integration with Salesforce, intelligent lead scoring, personalized outreach, campaign management, and production monitoring. This capstone shows you're ready for production deployment.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Integration",
+          "definition": "Combining multiple systems into one cohesive solution"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What should your sales capstone project demonstrate?",
+            "options": [
+              "Lead scoring, Salesforce integration, personalization, and monitoring",
+              "Only email sending",
+              "Only Salesforce API calls",
+              "Manual lead qualification only"
+            ],
+            "correctAnswer": "Lead scoring, Salesforce integration, personalization, and monitoring"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-17",
+      "tier": 2,
+      "specialization": "cs",
+      "week": 3,
+      "title": "APIs & Zendesk Integration",
+      "description": "Connect Claude automation to Zendesk support platform",
+      "objectives": [
+        "Understand Zendesk API and authentication",
+        "Integrate Claude with Zendesk",
+        "Read and respond to support tickets programmatically",
+        "Build ticket-handling workflows"
+      ],
+      "content": "Zendesk is a leading customer support platform. Learn to authenticate with Zendesk APIs, read incoming tickets, and use Claude to draft responses. Build automations that handle common support requests while escalating complex issues to human agents.",
+      "resources": [
+        {
+          "title": "Zendesk API Documentation",
+          "url": "https://developer.zendesk.com/api-reference/",
+          "description": "Official Zendesk API documentation"
+        }
+      ],
+      "keyTerms": [
+        {
+          "term": "Ticket",
+          "definition": "Support request from a customer"
+        },
+        {
+          "term": "Escalation",
+          "definition": "Moving a ticket to a higher level or human agent"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is the primary goal of Zendesk integration?",
+            "options": [
+              "Automate support ticket handling with Claude responses",
+              "Replace all support staff",
+              "Eliminate customer support",
+              "Delete support tickets"
+            ],
+            "correctAnswer": "Automate support ticket handling with Claude responses"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-18",
+      "tier": 2,
+      "specialization": "cs",
+      "week": 4,
+      "title": "Ticket Classification & Routing",
+      "description": "Automatically categorize and route support tickets",
+      "objectives": [
+        "Build ticket classification systems",
+        "Route tickets to appropriate teams",
+        "Handle special cases and escalations",
+        "Optimize routing rules"
+      ],
+      "content": "Not all support tickets are equal. Use Claude to read ticket content and classify them by type (billing, technical, general, etc.), urgency, and complexity. Build routing rules that direct each ticket to the best equipped team or automation flow.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Classification",
+          "definition": "Categorizing tickets by type or characteristic"
+        },
+        {
+          "term": "Routing",
+          "definition": "Directing tickets to appropriate handlers"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "Why is automatic ticket classification valuable?",
+            "options": [
+              "It directs tickets to appropriate teams quickly and consistently",
+              "It eliminates customer support",
+              "It deletes complex tickets",
+              "It reduces response quality"
+            ],
+            "correctAnswer": "It directs tickets to appropriate teams quickly and consistently"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-19",
+      "tier": 2,
+      "specialization": "cs",
+      "week": 5,
+      "title": "Sentiment Analysis & Knowledge Base",
+      "description": "Understand customer sentiment and leverage knowledge bases",
+      "objectives": [
+        "Analyze customer sentiment in tickets",
+        "Identify frustrated or satisfied customers",
+        "Build knowledge base search integration",
+        "Provide relevant self-service solutions"
+      ],
+      "content": "Understanding customer emotion is crucial. Use Claude to analyze sentiment in support tickets and identify escalation opportunities. Integrate your knowledge base so Claude can search for solutions and provide self-service options before escalating to humans.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Sentiment Analysis",
+          "definition": "Determining emotional tone of customer message"
+        },
+        {
+          "term": "Knowledge Base",
+          "definition": "Repository of solutions and documentation"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What advantage does sentiment analysis provide?",
+            "options": [
+              "Identifies upset customers for priority handling",
+              "Deletes negative feedback",
+              "Ignores customer feelings",
+              "Requires manual analysis only"
+            ],
+            "correctAnswer": "Identifies upset customers for priority handling"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-20",
+      "tier": 2,
+      "specialization": "cs",
+      "week": 6,
+      "title": "Support Automation at Scale",
+      "description": "Deploy customer support automation to thousands of tickets",
+      "objectives": [
+        "Design scalable support systems",
+        "Handle high ticket volumes",
+        "Maintain quality with automation",
+        "Manage SLAs and performance metrics"
+      ],
+      "content": "Small-scale automation is one thing; handling thousands of daily tickets is another. Learn to build systems that maintain quality while scaling. Cover performance optimization, SLA management, rate limiting, and monitoring support metrics at scale.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "SLA",
+          "definition": "Service Level Agreement - commitment to response/resolution times"
+        },
+        {
+          "term": "Throughput",
+          "definition": "Number of requests/tickets processed per unit time"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is critical when scaling support automation?",
+            "options": [
+              "Maintaining response quality while increasing volume",
+              "Maximizing ticket numbers",
+              "Minimizing customer support",
+              "Reducing automation monitoring"
+            ],
+            "correctAnswer": "Maintaining response quality while increasing volume"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-21",
+      "tier": 2,
+      "specialization": "cs",
+      "week": 6,
+      "title": "Response Generation & Quality",
+      "description": "Generate high-quality customer support responses",
+      "objectives": [
+        "Generate contextual support responses",
+        "Maintain brand voice and tone",
+        "Ensure technical accuracy",
+        "Quality assurance for automated responses"
+      ],
+      "content": "Claude can draft professional support responses. Learn to generate responses that are helpful, empathetic, and accurate. Build systems that review responses for quality, tone, and technical correctness before sending to customers.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Quality Assurance",
+          "definition": "Process of checking that outputs meet standards"
+        },
+        {
+          "term": "Brand Voice",
+          "definition": "Consistent tone and style in communications"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What ensures generated support responses are appropriate?",
+            "options": [
+              "Quality assurance review and tone/accuracy checking",
+              "Sending all responses immediately",
+              "No review process",
+              "Random response selection"
+            ],
+            "correctAnswer": "Quality assurance review and tone/accuracy checking"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-22",
+      "tier": 2,
+      "specialization": "cs",
+      "week": 7,
+      "title": "Customer Service Analytics",
+      "description": "Analyze and improve support operations with data",
+      "objectives": [
+        "Track support metrics and KPIs",
+        "Identify improvement opportunities",
+        "Analyze resolution times and satisfaction",
+        "Generate operational insights"
+      ],
+      "content": "Use data to continuously improve. Learn to track customer satisfaction, resolution times, first-contact resolution rates, and other metrics. Use Claude to analyze patterns and recommend improvements to your support operations.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "KPI",
+          "definition": "Key Performance Indicator - metric that shows performance"
+        },
+        {
+          "term": "CSAT",
+          "definition": "Customer Satisfaction Score"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "Why is support analytics important?",
+            "options": [
+              "To identify improvement areas and track performance",
+              "To eliminate customer support",
+              "To ignore customer feedback",
+              "To reduce agent training"
+            ],
+            "correctAnswer": "To identify improvement areas and track performance"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-23",
+      "tier": 2,
+      "specialization": "cs",
+      "week": 7,
+      "title": "Human-AI Collaboration",
+      "description": "Build seamless workflows between AI and human agents",
+      "objectives": [
+        "Design handoff mechanisms",
+        "Provide context to human agents",
+        "Build feedback loops",
+        "Improve automation through human insights"
+      ],
+      "content": "The best support systems combine AI and human expertise. Learn to design handoffs where Claude handles routine issues and escalates complex ones to humans with full context. Build feedback systems so human agents can improve the automation.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Handoff",
+          "definition": "Transferring a ticket from automation to human agent"
+        },
+        {
+          "term": "Context",
+          "definition": "Information provided to help human agent understand situation"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What should happen when AI escalates to a human agent?",
+            "options": [
+              "Provide full context so human can continue efficiently",
+              "Start from scratch with no information",
+              "Delete ticket history",
+              "End the conversation"
+            ],
+            "correctAnswer": "Provide full context so human can continue efficiently"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-24",
+      "tier": 2,
+      "specialization": "cs",
+      "week": 8,
+      "title": "Proactive Support & Prevention",
+      "description": "Prevent issues before customers report them",
+      "objectives": [
+        "Identify at-risk customers",
+        "Implement proactive outreach",
+        "Reduce support volume through prevention",
+        "Improve customer retention"
+      ],
+      "content": "The best support is preventing issues from happening. Use Claude to analyze customer behavior and identify potential problems. Build proactive systems that reach out to prevent issues or offer relevant information before customers submit tickets.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Proactive",
+          "definition": "Acting before a problem occurs"
+        },
+        {
+          "term": "Churn",
+          "definition": "Customers leaving or canceling service"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What is the benefit of proactive support?",
+            "options": [
+              "Prevents issues and improves customer satisfaction",
+              "Requires all customers to report problems",
+              "Increases support workload",
+              "Reduces product quality"
+            ],
+            "correctAnswer": "Prevents issues and improves customer satisfaction"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-25",
+      "tier": 2,
+      "specialization": "cs",
+      "week": 8,
+      "title": "Multilingual Support",
+      "description": "Serve customers in multiple languages automatically",
+      "objectives": [
+        "Build language detection systems",
+        "Generate responses in customer's language",
+        "Handle translation challenges",
+        "Localize support for global customers"
+      ],
+      "content": "Claude can work in 90+ languages. Build support systems that automatically detect customer language and respond appropriately. Expand your support reach globally while keeping your team local.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Localization",
+          "definition": "Adapting products/services for specific languages/cultures"
+        },
+        {
+          "term": "Language Detection",
+          "definition": "Identifying which language a message is written in"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "How many languages can Claude assist with?",
+            "options": [
+              "90+ languages",
+              "Only English",
+              "5-10 languages",
+              "No languages besides English"
+            ],
+            "correctAnswer": "90+ languages"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lesson-26",
+      "tier": 2,
+      "specialization": "cs",
+      "week": 8,
+      "title": "Customer Service Automation Capstone",
+      "description": "Build a complete customer support automation system",
+      "objectives": [
+        "Integrate all CS automation concepts",
+        "Build end-to-end support workflow",
+        "Demonstrate ticket handling, routing, and escalation",
+        "Show quality assurance and monitoring"
+      ],
+      "content": "Apply everything from Weeks 3-8. Build a complete customer service automation that demonstrates Zendesk integration, intelligent routing, sentiment analysis, quality response generation, and seamless handoff to humans. This capstone shows production-readiness.",
+      "resources": [],
+      "keyTerms": [
+        {
+          "term": "Integration",
+          "definition": "Combining multiple systems into cohesive solution"
+        }
+      ],
+      "quiz": {
+        "questions": [
+          {
+            "id": "q1",
+            "text": "What should your CS capstone demonstrate?",
+            "options": [
+              "Ticket handling, routing, classification, quality generation, and escalation",
+              "Only ticket creation",
+              "Only Zendesk API calls",
+              "Manual ticket handling only"
+            ],
+            "correctAnswer": "Ticket handling, routing, classification, quality generation, and escalation"
+          }
+        ]
+      }
+    }
+  ]
+}

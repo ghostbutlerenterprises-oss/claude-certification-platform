@@ -1,0 +1,32 @@
+{
+  "name": "claude-certification-platform",
+  "version": "1.0.0",
+  "description": "Claude AI Certification Curriculum Platform with auto-grading",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@supabase/supabase-js": "^2.38.0",
+    "@supabase/auth-helpers-nextjs": "^0.8.0",
+    "@anthropic-ai/sdk": "^0.9.1",
+    "resend": "^1.0.0",
+    "zustand": "^4.4.0",
+    "axios": "^1.6.0",
+    "markdown-it": "^13.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
