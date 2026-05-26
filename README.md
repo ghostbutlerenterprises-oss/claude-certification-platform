@@ -249,7 +249,7 @@ MIT
 3. **Add students** — Share your domain
 4. **Monitor** — Check Supabase dashboard for progress
 5. **Scale** — Upgrade tiers as you grow
-
+# Ready to Deploy
 ---
 
 **Built with Next.js, Supabase, Claude, and Resend**
