@@ -1,6 +1,6 @@
 {
   "name": "claude-certification-platform",
-  "version": "1.0.0",
+  "version": "1.0.1" ,
   "description": "Claude AI Certification Curriculum Platform with auto-grading",
   "private": true,
   "scripts": {
