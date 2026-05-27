@@ -138,7 +138,7 @@ export default function Dashboard() {
                   </p>
                   {score !== null && (
                     <p style={{ margin: '5px 0', fontSize: '14px', color: '#666' }}>
-                      Quiz Score: <strong>{score.toFixed(1)}%</strong>
+                      Quiz Score: <strong>{score ? score.toFixed(1) : '0'}%</strong>
                     </p>
                   )}
                 </div>
