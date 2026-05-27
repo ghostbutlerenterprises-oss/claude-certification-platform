@@ -257,3 +257,6 @@ MIT
 **Your Vercel Domain:** `https://claude-certification-platform.vercel.app`
 
 **Your GitHub Repo:** `https://github.com/ghostbutlerenterprises-oss/claude-certification-platform`
+
+
+<!-- Deployment trigger -->
